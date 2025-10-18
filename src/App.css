@@ -1,0 +1,202 @@
+.App {
+  width: 100%;
+  min-height: 100vh;
+  background: white;
+}
+
+.hero-section {
+  position: relative;
+  min-height: 200vh;
+  width: 100%;
+  z-index: 7;
+  /* background: #7FB069; */
+  background: #b9fd65;
+}
+
+.sticky-container {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.brand-text {
+  position: absolute;
+  font-size: clamp(4rem, 15vw, 12rem);
+  font-weight: 900;
+  color: #000000;
+  letter-spacing: 0.1em;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+  margin: 0;
+  line-height: 1;
+  white-space: nowrap;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -130%);
+}
+
+.burger-container {
+  position: relative;
+  z-index: 10;
+  width: 90%;
+  max-width: 600px;
+}
+
+.burger-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* Content Container */
+.content-wrapper {
+  position: relative;
+  background: white;
+  z-index: 5;
+}
+
+.content-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center; /* vertically center items in their areas */
+  align-content: center; /* center the grid as a whole within the container */
+}
+
+.content-left {
+  padding: 2rem;
+  padding-top: 2rem;
+}
+
+.content-left h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: #000000;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.content-left p {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.content-right {
+  display: flex;
+  align-items: center; /* center vertically so docking is noticeable */
+  justify-content: center;
+  min-height: 800px;
+  position: relative;
+  padding-top: 0;
+  border-radius: 20px;
+  z-index: 6; /* ensure above background wrappers */
+}
+
+
+.yummy-image {
+  position: absolute;
+  top: calc(100vh - 15rem);
+  right: 17rem;
+  max-width: 200px;
+  width: auto;
+  height: auto;
+  z-index: 3;
+  transform: rotate(20deg);
+}
+
+.homemade-image {
+  position: absolute;
+  top: calc(100vh - 15rem);
+  left: 17rem;
+  max-width: 200px;
+  width: auto;
+  height: auto;
+  z-index: 3;
+  transform: rotate(-20deg);
+}
+
+@media (max-width: 768px) {
+  .brand-text {
+    font-size: clamp(4rem, 15vw, 8rem);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -170%);
+  }
+
+  .burger-image {
+    max-width: 95%;
+    width: 95%;
+  }
+
+  .yummy-image {
+    max-width: 120px;
+    top: calc(100vh - 13rem);
+    right: 1rem;
+  }
+
+  .homemade-image {
+    max-width: 120px;
+    top: calc(100vh - 13rem);
+    left: 1rem;
+  }
+
+  .content-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .content-left {
+    padding: 1rem;
+    padding-top: 2rem;
+    grid-row: 2;
+  }
+
+  .content-right {
+    min-height: 400px;
+    padding-top: 0;
+    grid-row: 1;
+  }
+}
+
+/* About Us Shape Divider */
+.shapedividers_com-2036{
+  overflow:hidden;
+  position:relative;
+}
+.shapedividers_com-2036::before{ 
+  content:'';
+  font-family:'shape divider from ShapeDividers.com';
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  bottom: -0.1vw;
+  left: -0.1vw;
+  right: -0.1vw;
+  top: -0.1vw; 
+  background-size: 135% 256px;
+  background-position: 50% 0%; 
+  transform: rotateY(180deg); 
+  background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.28 2.17" preserveAspectRatio="none"><path d="M0 .5c3.07.55 9.27-.42 16.14 0 6.88.4 13.75.57 19.14-.11V0H0z" fill="%23b9fd65"/></svg>'); 
+}
+
+@media (min-width:2100px){
+  .shapedividers_com-2036::before{
+    background-size: 135% calc(2vw + 256px);
+  }
+}
